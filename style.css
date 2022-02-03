@@ -1,0 +1,140 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --body: #121214;
+   --text: #E1E1E6;
+   --title: #04D361;
+   --form: #A8A8A8;
+   --button: #8257e5;
+}
+
+body {
+   background-color: var(--body);
+   color: var(--text);
+   font: 700 0.75rem "Spartan", sans-serif;
+}
+
+.container {
+   display: flex;
+   height: 100vh;
+}
+
+.section {
+   width: 50%;
+}
+
+.section .content {
+   /* max-width: 720px; */
+   padding: 3.25rem 2rem;
+}
+
+header {
+   margin-bottom: 5.75rem;
+}
+
+.logo img {
+   width: 24.5rem;
+}
+
+.content .text {
+   margin-bottom: 3rem;
+}
+
+.text .title {
+   margin-bottom: 1rem;
+   font: 700 1.5rem "Work Sans", sans-serif;
+   color: var(--title);
+}
+
+.text .subtitle {
+   margin-bottom: 1rem;
+}
+
+.legend {
+   color: var(--form);
+   font-weight: 400;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   height: 5.5rem;
+   margin-bottom: 2rem;
+   position: relative;
+}
+
+form span {
+   display: flex;
+   align-items: center;
+   position: absolute;
+   bottom: 0;
+   width: calc(100% + 9rem);
+
+   box-shadow: 4px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+form input {
+   height: 3rem;
+   width: 100%;
+
+   padding: 0 10px;
+
+   border: none;
+   border-left: 5px solid var(--title);
+}
+
+form button {
+   width: 3rem;
+   height: 3rem;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   border: none;
+   background-color: var(--button);
+}
+
+.link a {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   color: var(--button);
+}
+
+.link a img {
+   margin-left: 5px;
+}
+
+.section .image {
+   height: 100%;
+   /* background-image: url(/assets/read_news.jpg);
+   background-position: center right;
+   background-size: cover; */
+}
+
+.section .image img {
+   height: 100%;
+   width: 100%;
+
+   object-fit: cover;
+   object-position: right;
+}
+
+@media (max-width: 768px) {
+   .container {
+      flex-direction: column;
+   }
+
+   .section {
+      width: 100%;
+   }
+
+   form span {
+      width: 100%;
+   }
+}
